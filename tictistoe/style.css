@@ -1,0 +1,74 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+   width: 100vw;
+   height: 100vh;
+   background-color: #2f3542;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3 , auto);
+}
+.box {
+    height: 100px;
+    width: 100px;
+    border:  2px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+ .box:nth-child(3) ~.box{
+    border-top: none;
+    
+ }
+#status{
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    color: whitesmoke ;
+    background-color: #ff4757;
+     border: none;
+     border-radius: 4px;
+     transition: 200ms transform;
+     
+    
+}
+
+button:hover{
+    
+    cursor: pointer;
+    transform: scale(0.96);
+    
+}
+
+.win{
+  animation: winAnimation ease-in-out 1s infinite;
+}
+
+@keyframes winAnimation  {
+    0%{background-color: rgb(247, 218, 2);}
+    100%{background-color: dimgrey;}
+}
